@@ -51,41 +51,40 @@ public class Main {
 
         // Método 7
         System.out.println("O grafo é completo? " + g.eCompleto());
+        
 
+        /* Grafo Dirigido - Em andamento
 
-        // -----------------------------------------------------------------//
+        System.out.println("Grafo Dirigido:");
+        GrafoDirigido gD = new GrafoDirigido();
 
-//        System.out.println("Grafo Dirigido:");
-//        GrafoDirigido gD = new GrafoDirigido();
-//
-//        Vertice sD = gD.adicionarVertice("s");
-//        Vertice tD = gD.adicionarVertice("t");
-//        Vertice uD = gD.adicionarVertice("u");
-//        Vertice vD = gD.adicionarVertice("v");
-//        Vertice xD = gD.adicionarVertice("x");
-//
-//        gD.adicionarAresta(v, s);
-//        gD.adicionarAresta(v, t);
-//        gD.adicionarAresta(v, u);
-//        gD.adicionarAresta(v, x);
-//
-//        gD.adicionarAresta(x, u);
-//
-//        gD.adicionarAresta(u, t);
-//
-//        gD.adicionarAresta(u, u);
-//
-//        gD.imprimir();
-//
-//        eAdj = g.eAdjacente(s, v);
-//        System.out.println("\nO vértice S aponta para V? " + eAdj); // True
-//
-//        eAdj= g.eAdjacente(x, t);
-//        System.out.println("O vértice X aponta para T? " + eAdj); // False
-//
-//        grau = g.getGrau(v);
-//        System.out.println("O vértice V possui grau de entrada igual a: " + grau);
+        Vertice sD = gD.adicionarVertice("s");
+        Vertice tD = gD.adicionarVertice("t");
+        Vertice uD = gD.adicionarVertice("u");
+        Vertice vD = gD.adicionarVertice("v");
+        Vertice xD = gD.adicionarVertice("x");
 
+        gD.adicionarAresta(v, s);
+        gD.adicionarAresta(v, t);
+        gD.adicionarAresta(v, u);
+        gD.adicionarAresta(v, x);
+
+        gD.adicionarAresta(x, u);
+
+        gD.adicionarAresta(u, t);
+
+        gD.adicionarAresta(u, u);
+
+        gD.imprimir();
+
+        eAdj = g.eAdjacente(s, v);
+        System.out.println("\nO vértice S aponta para V? " + eAdj); // True
+
+        eAdj= g.eAdjacente(x, t);
+        System.out.println("O vértice X aponta para T? " + eAdj); // False
+
+        grau = g.getGrau(v);
+        System.out.println("O vértice V possui grau de entrada igual a: " + grau);*/
     }
 
 }
