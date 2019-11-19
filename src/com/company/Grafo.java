@@ -52,6 +52,7 @@ public class Grafo {
         return v;
     }
 
+    // Método 1
     // Em dígrafos, retorna de o verticeUm "aponta" para o verticeDois
     public boolean eAdjacente(Vertice verticeUm, Vertice verticeDois ){
         Vertice v = encontrarVertice(verticeUm);

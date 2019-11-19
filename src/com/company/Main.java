@@ -1,6 +1,8 @@
 package com.company;
 import com.company.Grafo.Vertice;
 
+import java.sql.SQLOutput;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -18,30 +20,39 @@ public class Main {
         g.adicionarAresta(v, t);
         g.adicionarAresta(v, u);
         g.adicionarAresta(v, x);
+        // Adiciona loop - g.adicionarAresta(v, v);
 
         g.adicionarAresta(x, u);
-
         g.adicionarAresta(u, t);
-
         g.adicionarAresta(u, u);
 
         g.imprimir();
 
-        boolean eAdj;
-        eAdj = g.eAdjacente(s, v);
-        System.out.println("\nOs vértices S e V são adjacentes? " + eAdj); // True
+        // Método 1
+        System.out.println("\nOs vértices S e V são adjacentes? " + g.eAdjacente(s, v));
+        System.out.println("Os vértices X e T são adjacentes? " + g.eAdjacente(x, t));
 
-        eAdj= g.eAdjacente(x, t);
-        System.out.println("Os vértices X e T são adjacentes? " + eAdj); // False
+        // Método 2
+        System.out.println("O vértice s possui grau igual a: " +g.getGrau(s));
+        System.out.println("O vértice x possui grau igual a: " +g.getGrau(x));
+        System.out.println("O vértice v possui grau igual a: " +g.getGrau(v));
 
-        int grau = g.getGrau(v);
-        System.out.println("O vértice V possui grau igual a: " + grau);
+        // Método 3
+        System.out.println("O grafo é regular? " + g.eRegular());
 
-        boolean eRegular = g.eRegular();
-        System.out.println("O grafo é regular? " + eRegular);
+        // Método 4
+        System.out.println("O vértice S é isolado? " + g.eIsolado(s));
 
-        boolean eNulo = g.eNulo();
-        System.out.println("O grafo é nulo? " + eNulo);
+        // Método 5
+        System.out.println("O vértice V é pendente? " + g.ePendente(v));
+
+        // Método 6
+        System.out.println("O grafo é nulo? " + g.eNulo());
+
+        // Método 7
+        System.out.println("O grafo é completo? " + g.eCompleto());
+
+
         // -----------------------------------------------------------------//
 
 //        System.out.println("Grafo Dirigido:");
