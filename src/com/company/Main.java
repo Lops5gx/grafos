@@ -52,7 +52,16 @@ public class Main {
         // MÃ©todo 7
         System.out.println("O grafo Ã© completo? " + g.eCompleto());
         
+        // Método 8
+        System.out.println("O grafo é conexo? " + g.eConexo());
+        
+        // Método 11
+        System.out.println("O grafo é euleriano? " + g.eEuleriano());
+        
+        // Método 12
+        System.out.println("O grafo é unicursal? " + g.eUnicursal());
 
+     
         /* Grafo Dirigido - Em andamento
 
         System.out.println("Grafo Dirigido:");

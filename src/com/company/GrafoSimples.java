@@ -1,5 +1,10 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.company.Grafo.Vertice;
+
 public class GrafoSimples extends Grafo {
 
     private Vertice encontrarVertice(Vertice vertice){
@@ -52,6 +57,45 @@ public class GrafoSimples extends Grafo {
         } else {
             return false;
         }
+    }
+    
+    // Método 8
+    public boolean eConexo() {
+   	 for (Vertice vIndice : this.vertices){
+   		 if(getGrauSemLoop(vIndice) == 0) 
+   			 return false;
+   	 }
+   	return true; 		
+   }
+    
+    // Método 11
+    public boolean eEuleriano() {
+    	if(this.eConexo() && this.verificarTodosVerticesGrauPar())
+    		return true;
+    
+    	 return false;
+    }
+    
+    // Método 12
+    public boolean eUnicursal() {
+    	int count = 0;
+    	if(!verificarTodosVerticesGrauPar()) {
+    		for (Vertice vIndice : this.vertices){
+       		 if(this.getGrau(vIndice) % 2 != 0)
+       			 count++;
+       	 }
+    		if(count == 2)
+    			return true;
+    	}
+    	return false;
+    }
+
+    public boolean verificarTodosVerticesGrauPar() {
+    	 for (Vertice vIndice : this.vertices){
+    		 if(this.getGrau(vIndice) % 2 != 0)
+    			 return false;
+    	 }
+    	 return true;
     }
 
     private boolean verificarIgualdadeGrau(int grauBase){
