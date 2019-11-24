@@ -59,5 +59,11 @@ public class Grafo {
         int index = v.verticesAdjacentes.indexOf(verticeDois);
         return (index != -1);
     }
+    
+    public void removerAresta(Vertice extremidadeUm, Vertice extremidadeDois) {
+    	extremidadeUm.verticesAdjacentes.remove(extremidadeDois);
+    	if (!extremidadeUm.equals(extremidadeDois))
+            extremidadeDois.verticesAdjacentes.remove(extremidadeUm);
+    }
 }
 
