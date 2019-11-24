@@ -76,22 +76,19 @@ public class GrafoSimples extends Grafo {
         return vertice.verticesAdjacentes.size() - contLoop;
     }
 
-    /* public boolean eCompleto(){
-        boolean adjacente, completo = false;
-        if (this.eRegular()){
-            completo = true;
-
-            for (Vertice v : this.vertices){
-                if(completo){
-                    for(Vertice vAdj : this.vertices){
-                        adjacente = super.eAdjacente(v, vAdj);
-                        if(!adjacente){
-                            completo = false;
-                        }
-                    }
-                }
-            }
-        }
-        return completo;
-    } */
+    //Método 10
+    public void getComplementar(GrafoSimples g) {
+    	GrafoSimples complementar = g;
+    	int count = 0;
+    	for(Vertice v : g.vertices) {
+    		for(int j = count; j < g.vertices.size(); j++) {
+    			if(!g.eAdjacente(v, g.vertices.get(j)) && !v.nome.equals(g.vertices.get(j).nome)) 
+    				complementar.adicionarAresta(v, g.vertices.get(j));
+    			else
+    				complementar.removerAresta(v, g.vertices.get(j));
+    		}
+    		count++;
+    	}
+    	complementar.imprimir();
+    }
 }
