@@ -52,7 +52,10 @@ public class Main {
         // Método 7
         System.out.println("O grafo é completo? " + g.eCompleto());
         
-
+        //Método 10
+        System.out.println("Grafo complementar: ");
+        g.getComplementar(g);
+        
         /* Grafo Dirigido - Em andamento
 
         System.out.println("Grafo Dirigido:");
