@@ -9,11 +9,11 @@
       OK  5. bool isPendente (Vertice v1) { }
       OK  6. bool isNulo (Grafo G) { }
       OK  7. bool isCompleto (Grafo G) { }
-      8. bool isConexo (Grafo G) { }
+      OK  8. bool isConexo (Grafo G) { }
       9. bool isBipartido (Grafo G) { }
-      10. Grafo getComplementar (Grafo G) { }
-      11. bool isEuleriano (Grafo G ) { }
-      12. bool isUnicursal (Grafo G ) { }
+      OK  10. Grafo getComplementar (Grafo G) { }
+      OK  11. bool isEuleriano (Grafo G ) { }
+      OK  12. bool isUnicursal (Grafo G ) { }
       13. bool hasCiclo (Grafo G) { }
       14. int getGrauEntrada (Vertice v1) { }
       15. void ordenacaoTopologica (Grafo G) { } //verifique se o grafo é acíclico antes
