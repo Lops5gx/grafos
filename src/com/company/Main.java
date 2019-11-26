@@ -51,9 +51,15 @@ public class Main {
 
         // Método 7
         System.out.println("O grafo é completo? " + g.eCompleto());
-        
+
         // Método 8
         System.out.println("O grafo é conexo? " + g.eConexo());
+
+        // Método 9
+
+        //Método 10
+        System.out.println("Grafo complementar: ");
+        g.getComplementar(g);
 
         // Método 11
         System.out.println("O grafo é euleriano? " + g.eEuleriano());

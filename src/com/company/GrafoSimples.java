@@ -90,6 +90,22 @@ public class GrafoSimples extends Grafo {
    }
 
    // Método 9
+
+    //Método 10
+    public void getComplementar(GrafoSimples g) {
+        GrafoSimples complementar = g;
+        int count = 0;
+        for(Vertice v : g.vertices) {
+            for(int j = count; j < g.vertices.size(); j++) {
+                if(!g.eAdjacente(v, g.vertices.get(j)) && !v.nome.equals(g.vertices.get(j).nome))
+                    complementar.adicionarAresta(v, g.vertices.get(j));
+                else
+                    complementar.removerAresta(v, g.vertices.get(j));
+            }
+            count++;
+        }
+        complementar.imprimir();
+    }
     
     // Método 11
     public boolean eEuleriano() {
@@ -122,5 +138,4 @@ public class GrafoSimples extends Grafo {
     }
 
     // Método 13
-
 }
