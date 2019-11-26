@@ -17,6 +17,11 @@ public class Grafo {
         void addAdj(Vertice v) {
             this.verticesAdjacentes.add(v);
         }
+
+        void addAdj(String nome){
+            Vertice v = new Vertice(nome);
+            this.verticesAdjacentes.add(v);
+        }
     }
 
     List<Vertice> vertices;
