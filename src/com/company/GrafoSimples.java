@@ -76,22 +76,16 @@ public class GrafoSimples extends Grafo {
         return vertice.verticesAdjacentes.size() - contLoop;
     }
 
-    /* public boolean eCompleto(){
-        boolean adjacente, completo = false;
-        if (this.eRegular()){
-            completo = true;
+    // Método 8
 
-            for (Vertice v : this.vertices){
-                if(completo){
-                    for(Vertice vAdj : this.vertices){
-                        adjacente = super.eAdjacente(v, vAdj);
-                        if(!adjacente){
-                            completo = false;
-                        }
-                    }
-                }
-            }
-        }
-        return completo;
-    } */
+    // Método 9
+
+    // Método 10
+
+    // Método 11
+
+    // Método 12
+
+    // Método 13
+
 }
