@@ -51,13 +51,23 @@ public class Main {
 
         // Método 7
         System.out.println("O grafo é completo? " + g.eCompleto());
-        
+
+        // Método 8
+        System.out.println("O grafo é conexo? " + g.eConexo());
+
+        // Método 9
+
         //Método 10
         System.out.println("Grafo complementar: ");
         g.getComplementar(g);
-        
-        /* Grafo Dirigido - Em andamento
 
+        // Método 11
+        System.out.println("O grafo é euleriano? " + g.eEuleriano());
+
+        // Método 12
+        System.out.println("O grafo é unicursal? " + g.eUnicursal());
+
+        System.out.println("\n------------------------------------------------\n");
         System.out.println("Grafo Dirigido:");
         GrafoDirigido gD = new GrafoDirigido();
 
@@ -67,27 +77,26 @@ public class Main {
         Vertice vD = gD.adicionarVertice("v");
         Vertice xD = gD.adicionarVertice("x");
 
-        gD.adicionarAresta(v, s);
-        gD.adicionarAresta(v, t);
-        gD.adicionarAresta(v, u);
-        gD.adicionarAresta(v, x);
-
-        gD.adicionarAresta(x, u);
-
-        gD.adicionarAresta(u, t);
-
-        gD.adicionarAresta(u, u);
+        gD.adicionarAresta(vD, sD);
+        gD.adicionarAresta(vD, tD);
+        gD.adicionarAresta(vD, uD);
+        gD.adicionarAresta(vD, xD);
+        gD.adicionarAresta(xD, uD);
+        gD.adicionarAresta(uD, tD);
+        gD.adicionarAresta(uD, uD);
 
         gD.imprimir();
 
-        eAdj = g.eAdjacente(s, v);
-        System.out.println("\nO vértice S aponta para V? " + eAdj); // True
+        System.out.println("\nO vértice S aponta para V? " + gD.eAdjacente(sD, vD));
 
-        eAdj= g.eAdjacente(x, t);
-        System.out.println("O vértice X aponta para T? " + eAdj); // False
+        System.out.println("O vértice X aponta para T? " + gD.eAdjacente(xD, tD));
 
-        grau = g.getGrau(v);
-        System.out.println("O vértice V possui grau de entrada igual a: " + grau);*/
+        // Método  14
+        System.out.println("O vértice V possui grau de entrada igual a: " + gD.getGrauEntrada(sD));
+
+        // Método 16
+        Grafo transposto = gD.getTransposto();
+        transposto.imprimir();
     }
 
 }
