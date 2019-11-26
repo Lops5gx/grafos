@@ -51,6 +51,15 @@ public class Main {
 
         // Método 7
         System.out.println("O grafo é completo? " + g.eCompleto());
+        
+        // Método 8
+        System.out.println("O grafo é conexo? " + g.eConexo());
+
+        // Método 11
+        System.out.println("O grafo é euleriano? " + g.eEuleriano());
+
+        // Método 12
+        System.out.println("O grafo é unicursal? " + g.eUnicursal());
 
         System.out.println("\n------------------------------------------------\n");
         System.out.println("Grafo Dirigido:");
