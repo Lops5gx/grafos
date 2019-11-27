@@ -15,9 +15,9 @@
       OK  11. bool isEuleriano (Grafo G ) { }
       OK  12. bool isUnicursal (Grafo G ) { }
       13. bool hasCiclo (Grafo G) { }
-      14. int getGrauEntrada (Vertice v1) { }
+      OK  14. int getGrauEntrada (Vertice v1) { }
       15. void ordenacaoTopologica (Grafo G) { } //verifique se o grafo é acíclico antes
-      16. Grafo getTransposto (Grafo G) { }
+      OK  16. Grafo getTransposto (Grafo G) { }
       17. bool isFConexo (Grafo G) { }
       
     Observações:    
