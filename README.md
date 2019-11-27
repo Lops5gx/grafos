@@ -10,7 +10,7 @@
       OK  6. bool isNulo (Grafo G) { }
       OK  7. bool isCompleto (Grafo G) { }
       OK  8. bool isConexo (Grafo G) { }
-      9. bool isBipartido (Grafo G) { }
+      OK. bool isBipartido (Grafo G) { }
       OK  10. Grafo getComplementar (Grafo G) { }
       OK  11. bool isEuleriano (Grafo G ) { }
       OK  12. bool isUnicursal (Grafo G ) { }
