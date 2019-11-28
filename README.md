@@ -1,4 +1,4 @@
-    LINK DA DOCUMENTAÇÃO https://docs.google.com/document/d/14eRl560EeUhOqfbCfO6ANb-W0rrcaZVOw4YBRrTfc7s/edit#
+    LINK DA DOCUMENTAÇÃO https://docs.google.com/document/d/14eRl560EeUhOqfbCfO6ANb-W0rrcaZVOw4YBRrTfc7s/edit?usp=sharing
     Trabalho final da disciplina algoritmos computacionais em grafos do 4º Período do curso Engenharia de Software PUC-Minas
 
     Implementar uma classe Grafo que contenha os seguintes métodos:
