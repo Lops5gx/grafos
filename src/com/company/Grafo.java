@@ -17,6 +17,11 @@ public class Grafo {
         void addAdj(Vertice v) {
             this.verticesAdjacentes.add(v);
         }
+
+        void addAdj(String nome){
+            Vertice v = new Vertice(nome);
+            this.verticesAdjacentes.add(v);
+        }
     }
 
     List<Vertice> vertices;
@@ -58,6 +63,12 @@ public class Grafo {
         Vertice v = encontrarVertice(verticeUm);
         int index = v.verticesAdjacentes.indexOf(verticeDois);
         return (index != -1);
+    }
+    
+    public void removerAresta(Vertice extremidadeUm, Vertice extremidadeDois) {
+    	extremidadeUm.verticesAdjacentes.remove(extremidadeDois);
+    	if (!extremidadeUm.equals(extremidadeDois))
+            extremidadeDois.verticesAdjacentes.remove(extremidadeUm);
     }
 }
 

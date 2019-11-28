@@ -1,3 +1,4 @@
+    LINK DA DOCUMENTAÇÃO https://docs.google.com/document/d/14eRl560EeUhOqfbCfO6ANb-W0rrcaZVOw4YBRrTfc7s/edit?usp=sharing
     Trabalho final da disciplina algoritmos computacionais em grafos do 4º Período do curso Engenharia de Software PUC-Minas
 
     Implementar uma classe Grafo que contenha os seguintes métodos:
@@ -9,15 +10,15 @@
       OK  5. bool isPendente (Vertice v1) { }
       OK  6. bool isNulo (Grafo G) { }
       OK  7. bool isCompleto (Grafo G) { }
-      8. bool isConexo (Grafo G) { }
-      9. bool isBipartido (Grafo G) { }
-      10. Grafo getComplementar (Grafo G) { }
-      11. bool isEuleriano (Grafo G ) { }
-      12. bool isUnicursal (Grafo G ) { }
+      OK  8. bool isConexo (Grafo G) { }
+      OK. bool isBipartido (Grafo G) { }
+      OK  10. Grafo getComplementar (Grafo G) { }
+      OK  11. bool isEuleriano (Grafo G ) { }
+      OK  12. bool isUnicursal (Grafo G ) { }
       13. bool hasCiclo (Grafo G) { }
-      14. int getGrauEntrada (Vertice v1) { }
+      OK  14. int getGrauEntrada (Vertice v1) { }
       15. void ordenacaoTopologica (Grafo G) { } //verifique se o grafo é acíclico antes
-      16. Grafo getTransposto (Grafo G) { }
+      OK  16. Grafo getTransposto (Grafo G) { }
       17. bool isFConexo (Grafo G) { }
       
     Observações:    
