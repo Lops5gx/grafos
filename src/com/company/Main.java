@@ -57,6 +57,21 @@ public class Main {
 
         // Método 9
 
+        GrafoSimples b = new GrafoSimples();
+        Vertice sB = b.adicionarVertice("s");
+        Vertice tB = b.adicionarVertice("t");
+        Vertice uB = b.adicionarVertice("u");
+        Vertice vB = b.adicionarVertice("v");
+        Vertice xB = b.adicionarVertice("x");
+
+        g.adicionarAresta(sB, xB);
+        g.adicionarAresta(tB, xB);
+        g.adicionarAresta(tB, vB);
+        g.adicionarAresta(uB, vB);
+
+        System.out.println("O grafo 'G'é bipartido? " + g.eBipartido());
+        System.out.println("O grafo 'B'é bipartido? " + b.eBipartido());
+
         //Método 10
         System.out.println("Grafo complementar: ");
         g.getComplementar(g);
@@ -92,7 +107,7 @@ public class Main {
         System.out.println("O vértice X aponta para T? " + gD.eAdjacente(xD, tD));
 
         // Método  14
-        System.out.println("O vértice V possui grau de entrada igual a: " + gD.getGrauEntrada(sD));
+        System.out.println("O vértice S possui grau de entrada igual a: " + gD.getGrauEntrada(sD));
 
         // Método 16
         Grafo transposto = gD.getTransposto();
