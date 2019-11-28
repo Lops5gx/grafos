@@ -1,4 +1,4 @@
-package com.company;
+﻿package com.company;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +56,7 @@ public class GrafoSimples extends Grafo {
 
         return (grauBase == grau);
     }
+
 
     // Método 4
     public boolean eIsolado(Vertice vertice){
@@ -216,5 +217,26 @@ public class GrafoSimples extends Grafo {
     	 return true;
     }
 
-    // Método 13
+    
+    //Método 13
+    
+    public boolean hasCiclo() {
+    	for (Vertice vIndice : this.vertices){
+            for (Vertice vAdjacente : vIndice.verticesAdjacentes){
+            	if(percorrerCaminho(vIndice, vAdjacente))
+            		return true;
+            }
+    	}
+    	return false;
+    }
+    
+    public boolean percorrerCaminho(Vertice o, Vertice d) {
+    	for (Vertice vIndice : d.verticesAdjacentes){
+            	for(Vertice v : o.verticesAdjacentes) {
+            		if(vIndice.equals(v)) 
+            			return true;
+            	}
+            }
+    	return false;
+    }
 }

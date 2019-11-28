@@ -1,4 +1,4 @@
-package com.company;
+﻿package com.company;
 
 public class GrafoDirigido extends Grafo {
 
@@ -51,4 +51,30 @@ public class GrafoDirigido extends Grafo {
 
     // Método 17
 
+ // Método 17
+    
+    public boolean isFConexo() { 
+    	for (Vertice vIndice : this.vertices){
+            for (Vertice vAdjacente : vIndice.verticesAdjacentes){
+            	if(percorrerGrafo(vIndice, vAdjacente))
+            		return true;
+            }
+    	}
+    	return false;
+    }
+    
+    public boolean percorrerGrafo(Vertice o, Vertice d) {
+    	int countVertice = o.verticesAdjacentes.size();
+    	int qtdVertices = this.vertices.size();
+    	for (Vertice vIndice : d.verticesAdjacentes){
+        	for(Vertice v : o.verticesAdjacentes) {
+        		if(vIndice != v) 
+        			countVertice++;
+        	}
+        }
+    	if(countVertice==qtdVertices)
+    		return true;
+    	else
+    		return false;
+    }
 }
