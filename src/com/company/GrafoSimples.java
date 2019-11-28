@@ -27,12 +27,34 @@ public class GrafoSimples extends Grafo {
 
     // Método 2
     public int getGrau(Vertice vertice){
-       return vertice.verticesAdjacentes.size();
+        int grau = (temLoop(vertice)) ? vertice.verticesAdjacentes.size() + 2 : vertice.verticesAdjacentes.size();
+        return grau;
+    }
+
+    private boolean temLoop(Vertice vertice){
+        boolean temLoop = false;
+        for(Vertice v : vertice.verticesAdjacentes){
+            if(v.nome.equals(vertice.nome)){
+                temLoop = true;
+            }
+        }
+        return temLoop;
     }
 
     // Método 3
     public boolean eRegular(){
-        return verificarIgualdadeGrau(this.getGrau(this.vertices.get(0)));
+        return verificarIgualdade(this.getGrau(this.vertices.get(0)));
+    }
+
+    private boolean verificarIgualdade(int grauBase){
+        int qtdVertices = this.vertices.size();
+        int grau, cont = 0;
+
+        do {
+            grau = this.getGrau(this.vertices.get(cont++));
+        }while (grauBase == grau && cont < qtdVertices);
+
+        return (grauBase == grau);
     }
 
     // Método 4
@@ -47,7 +69,7 @@ public class GrafoSimples extends Grafo {
 
     // Método 6
     public boolean eNulo(){
-        return verificarIgualdadeGrau(0);
+        return verificarIgualdade(0);
     }
 
     // Método 7
@@ -90,6 +112,63 @@ public class GrafoSimples extends Grafo {
    }
 
    // Método 9
+   public boolean eBipartido(){
+       List<Vertice> subGrafo1 = new ArrayList<>();
+       List<Vertice> subGrafo2 = new ArrayList<>();
+       List<Vertice> toRemove = new ArrayList<>();
+
+       // Criando caso base
+       Vertice verticeBase = this.vertices.get(0);
+       subGrafo1.add(verticeBase);
+       for(Vertice v: this.vertices){
+           if(this.eAdjacente(v, verticeBase)){
+               subGrafo2.add(v);
+           }else{
+               if(!v.nome.equals(verticeBase.nome)) subGrafo1.add(v);
+           }
+       }
+
+       // Verficando adjacencia entre os elementos do subrafo 1
+       for(Vertice vBase : subGrafo1){
+           if(!toRemove.contains(vBase)){
+               for(Vertice v : subGrafo1){
+                   if(!vBase.nome.equals(v.nome)){
+                       if(this.eAdjacente(vBase, v)){
+                           if(!subGrafo2.contains(v))subGrafo2.add(v);
+                           if(!toRemove.contains(v)) toRemove.add(v);
+                       }
+                   }
+               }
+           }
+       }
+
+       for(Vertice v : toRemove){
+           subGrafo1.remove(v);
+       }
+       toRemove.clear();
+
+
+       // Verficando adjacencia entre os elementos do subrafo 2
+       for(Vertice vBase : subGrafo2){
+           if(!toRemove.contains(vBase)){
+               for(Vertice v : subGrafo2){
+                   if(!vBase.nome.equals(v.nome)){
+                       if(this.eAdjacente(vBase, v)){
+                           if(!toRemove.contains(v)) toRemove.add(v);
+                       }
+                   }
+               }
+           }
+       }
+
+       for(Vertice v : toRemove){
+           subGrafo2.remove(v);
+       }
+       toRemove.clear();
+
+       return (subGrafo1.size() + subGrafo2.size()) == this.vertices.size();
+
+   }
 
     //Método 10
     public void getComplementar(GrafoSimples g) {
