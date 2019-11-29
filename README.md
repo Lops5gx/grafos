@@ -11,15 +11,15 @@
       OK  6. bool isNulo (Grafo G) { }
       OK  7. bool isCompleto (Grafo G) { }
       OK  8. bool isConexo (Grafo G) { }
-      OK. bool isBipartido (Grafo G) { }
+      OK  9. bool isBipartido (Grafo G) { }
       OK  10. Grafo getComplementar (Grafo G) { }
       OK  11. bool isEuleriano (Grafo G ) { }
       OK  12. bool isUnicursal (Grafo G ) { }
-      13. bool hasCiclo (Grafo G) { }
+      OK  13. bool hasCiclo (Grafo G) { }
       OK  14. int getGrauEntrada (Vertice v1) { }
       15. void ordenacaoTopologica (Grafo G) { } //verifique se o grafo é acíclico antes
       OK  16. Grafo getTransposto (Grafo G) { }
-      17. bool isFConexo (Grafo G) { }
+      OK  17. bool isFConexo (Grafo G) { }
       
     Observações:    
     
